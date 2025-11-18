@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profili social - Nome Persona</title>
+  <style>
+    :root {
+  --bg: #0f3b18;         /* sfondo principale verde scuro */
+  --bg-accent: #1f6f32;  /* punto di luce per il gradiente di sfondo */
+  --card-start: #1f8f46;  /* inizio gradiente scheda */
+  --card-end: #3fe78b;    /* fine gradiente scheda */
+  --text: #e5f7eb;
+  --muted: #bcdcc2;
+  --accent: #2ee06a;
+  --accent-hover: #63f698;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* verde sfumato sullo sfondo */
+  background: radial-gradient(1000px 600px at 80% -20%, var(--bg-accent), var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* scheda verde sfumata */
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg, rgba(31,143,70,0.14), rgba(63,231,139,0.06));
+  border: 1px solid rgba(46,224,106,0.18);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(10,40,20,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+  overflow: hidden;
+}
+
+    header {
+      padding: 28px 28px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.2px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      padding: 20px 20px 24px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+    }
+
+    .label {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .label strong {
+      font-weight: 600;
+    }
+
+    .label span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 16px 20px 22px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Accessibilità: focus visibile */
+    .link:focus, .cta:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="titolo">
+    <header>
+      <h1 id="titolo">Collegati con Libri Verdi Fritti alla Fermata del Bus</h1>
+      <p>Trovi qui i profili ufficiali. Scegli la piattaforma che preferisci.</p>
+    </header>
+
+    <nav aria-label="Menu dei profili social">
+      <!-- LinkedIn -->
+<!--
+      <a class="link" href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer" aria-label="Apri profilo LinkedIn in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#3b82f6" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 8.982h4v12.518H3zM9 8.982h3.837v1.712h.054c.535-1.013 1.845-2.081 3.797-2.081 4.061 0 4.812 2.67 4.812 6.143v6.746h-4V15.54c0-1.802-.033-4.118-2.509-4.118-2.514 0-2.9 1.963-2.9 3.993v6.085H9z"/>
+        </svg>
+        <span class="label">
+          <strong>LinkedIn</strong>
+          <span>@username</span>
+        </span>
+      </a>
+-->
+
+      <!-- GitHub -->
+<!--
+      <a class="link" href="https://github.com/username" target="_blank" rel="noopener noreferrer" aria-label="Apri profilo GitHub in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#e5e7eb" d="M12 .5a11.5 11.5 0 0 0-3.637 22.42c.574.106.784-.25.784-.555 0-.274-.01-1.167-.016-2.117-3.19.695-3.866-1.37-3.866-1.37-.523-1.331-1.278-1.686-1.278-1.686-1.045-.715.08-.701.08-.701 1.156.081 1.765 1.187 1.765 1.187 1.027 1.76 2.695 1.252 3.35.957.104-.766.402-1.251.73-1.54-2.546-.29-5.223-1.273-5.223-5.66 0-1.25.45-2.271 1.187-3.068-.119-.291-.515-1.462.113-3.05 0 0 .967-.31 3.17 1.173a10.95 10.95 0 0 1 5.77 0c2.2-1.483 3.166-1.173 3.166-1.173.63 1.588.234 2.759.116 3.05.739.797 1.185 1.818 1.185 3.068 0 4.399-2.682 5.366-5.236 5.652.413.355.783 1.052.783 2.123 0 1.532-.014 2.767-.014 3.144 0 .309.206.669.791.554A11.5 11.5 0 0 0 12 .5z"/>
+        </svg>
+        <span class="label">
+          <strong>GitHub</strong>
+          <span>@username</span>
+        </span>
+      </a>
+-->
+
+      <!-- Instagram -->
+      <a class="link" href="https://www.instagram.com/libriverdifrittialbus?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Apri profilo Instagram in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <radialGradient id="ig" cx="50%" cy="50%" r="75%">
+            <stop offset="0%" stop-color="#f58529"/>
+            <stop offset="50%" stop-color="#dd2a7b"/>
+            <stop offset="100%" stop-color="#8134af"/>
+          </radialGradient>
+          <path fill="url(#ig)" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 4.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm6.25-1.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/>
+        </svg>
+        <span class="label">
+          <strong>Instagram</strong>
+          <span>@libriverdifrittialbus</span>
+        </span>
+      </a>
+
+      <!-- X / Twitter -->
+<!--
+      <a class="link" href="https://twitter.com/username" target="_blank" rel="noopener noreferrer" aria-label="Apri profilo X (Twitter) in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#e5e7eb" d="M18.244 2H21l-6.41 7.34L22 22h-6.9l-5.4-7.2L5.11 22H2l6.83-7.81L2 2h6.9l5.02 6.69L18.244 2z"/>
+        </svg>
+        <span class="label">
+          <strong>X</strong>
+          <span>@username</span>
+        </span>
+      </a>
+-->
+
+
+      <!-- Facebook -->
+      <a class="link" href="https://www.facebook.com/groups/330254352671878/?ref=share" target="_blank" rel="noopener noreferrer" aria-label="Apri profilo Facebook in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#60a5fa" d="M22.675 0h-21.35C.595 0 0 .594 0 1.326v21.348C0 23.406.595 24 1.325 24H12.82v-9.294H9.692V11.41h3.127V8.708c0-3.1 1.892-4.788 4.655-4.788 1.323 0 2.458.099 2.79.142v3.236h-1.916c-1.503 0-1.795.715-1.795 1.763v2.349h3.59l-.467 3.297h-3.123V24h6.127C23.406 24 24 23.406 24 22.674V1.326C24 .594 23.406 0 22.675 0z"/>
+        </svg>
+        <span class="label">
+          <strong>Facebook</strong>
+          <span>@Libri Verdi Fritti alla fermata del bus</span>
+        </span>
+      </a>
+
+      <!-- YouTube -->
+<!--
+      <a class="link" href="https://www.youtube.com/@username" target="_blank" rel="noopener noreferrer" aria-label="Apri canale YouTube in nuova scheda">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ef4444" d="M23.5 6.19a3.01 3.01 0 0 0-2.12-2.13C19.83 3.5 12 3.5 12 3.5s-7.83 0-9.38.56A3.01 3.01 0 0 0 .5 6.19 31.54 31.54 0 0 0 0 12a31.54 31.54 0 0 0 .5 5.81 3.01 3.01 0 0 0 2.12 2.13C4.17 20.5 12 20.5 12 20.5s7.83 0 9.38-.56a3.01 3.01 0 0 0 2.12-2.13A31.54 31.54 0 0 0 24 12a31.54 31.54 0 0 0-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+        </svg>
+        <span class="label">
+          <strong>YouTube</strong>
+          <span>@username</span>
+        </span>
+      </a>
+-->
+
+      <!-- Email -->
+      <a class="link" aria-label="Invia email">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#22c55e" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 3-8 5-8-5v-1l8 5 8-5v1z"/>
+        </svg>
+        <span class="label">
+          <strong>Email</strong>
+          <span>Libriverdifritti@gmail.com</span>
+        </span>
+      </a>
+    </nav>
+
+    <footer>
+      <span>© 2025 Libriverdifritti</span>
+    </footer>
+  </main>
+</body>
+</html>
